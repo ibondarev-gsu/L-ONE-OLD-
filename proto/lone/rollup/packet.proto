@@ -1,0 +1,13 @@
+syntax = "proto3";
+package lone.rollup;
+
+option go_package = "L-ONE/x/rollup/types";
+
+message RollupPacketData {
+    oneof packet {
+        NoData noData = 1;
+    }
+}
+
+message NoData {
+}

@@ -54,8 +54,11 @@ import (
 	"google.golang.org/protobuf/types/known/durationpb"
 
 	lonemodulev1 "L-ONE/api/lone/lone/module"
+	rollupmodulev1 "L-ONE/api/lone/rollup/module"
 	_ "L-ONE/x/lone/module" // import for side-effects
 	lonemoduletypes "L-ONE/x/lone/types"
+	_ "L-ONE/x/rollup/module" // import for side-effects
+	rollupmoduletypes "L-ONE/x/rollup/types"
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 )
 
@@ -94,6 +97,7 @@ var (
 		circuittypes.ModuleName,
 		// chain modules
 		lonemoduletypes.ModuleName,
+		rollupmoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/initGenesis
 	}
 
@@ -119,6 +123,7 @@ var (
 		ibcfeetypes.ModuleName,
 		// chain modules
 		lonemoduletypes.ModuleName,
+		rollupmoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/beginBlockers
 	}
 
@@ -138,6 +143,7 @@ var (
 		ibcfeetypes.ModuleName,
 		// chain modules
 		lonemoduletypes.ModuleName,
+		rollupmoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/endBlockers
 	}
 
@@ -296,6 +302,10 @@ var (
 			{
 				Name:   lonemoduletypes.ModuleName,
 				Config: appconfig.WrapAny(&lonemodulev1.Module{}),
+			},
+			{
+				Name:   rollupmoduletypes.ModuleName,
+				Config: appconfig.WrapAny(&rollupmodulev1.Module{}),
 			},
 			// this line is used by starport scaffolding # stargate/app/moduleConfig
 		},

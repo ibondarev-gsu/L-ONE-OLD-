@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             (unknown)
-// source: lone/lone/query.proto
+// source: lone/rollup/query.proto
 
-package lone
+package rollup
 
 import (
 	context "context"
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Query_Params_FullMethodName = "/lone.lone.Query/Params"
+	Query_Params_FullMethodName = "/lone.rollup.Query/Params"
 )
 
 // QueryClient is the client API for Query service.
@@ -98,7 +98,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Query_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "lone.lone.Query",
+	ServiceName: "lone.rollup.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -107,5 +107,5 @@ var Query_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "lone/lone/query.proto",
+	Metadata: "lone/rollup/query.proto",
 }

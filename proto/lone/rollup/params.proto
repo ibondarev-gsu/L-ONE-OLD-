@@ -1,0 +1,15 @@
+syntax = "proto3";
+package lone.rollup;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "L-ONE/x/rollup/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "lone/x/rollup/Params";
+  option (gogoproto.equal) = true;
+
+  
+}
