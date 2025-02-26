@@ -1,4 +1,4 @@
-module L-ONE
+module github.com/ibondarev-gsu/L-ONE
 
 go 1.22.0
 
